@@ -1,5 +1,4 @@
-# node_modules
-node_modules
+# node_modules are not ignored as are required for github actions: https://github.com/Azure/docker-login/issues/3
 
 # Local folder created for debugging purposes
 .localtest
