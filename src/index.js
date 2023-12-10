@@ -1,6 +1,6 @@
 import { getInput, setOutput, setFailed } from '@actions/core';
 import { Octokit } from '@octokit/core';
-import { fetch } from 'node-fetch';
+import * as fetch from 'node-fetch';
 
 async function run() {
     try {
