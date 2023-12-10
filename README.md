@@ -13,7 +13,7 @@
 
 ### Usage
 
-Update [Github Variable](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) for a repository or organization.
+Updates [Github Variable](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) for a repository or organization.
 
 ```YAML
 - uses: mmoyaferrer/set-github-variable@v1.0.0
