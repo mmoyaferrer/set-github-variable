@@ -20,9 +20,9 @@ jobs:
               with:
                   node-version: 18
 
-            - run: yarn
+            - run: npm ci
 
-            - run: yarn lint
+            - run: npm run lint
 
     create-github-release:
         name: 'Create GitHub release'
