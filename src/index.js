@@ -1,5 +1,6 @@
 import { getInput, setOutput, setFailed } from '@actions/core';
 import { Octokit } from '@octokit/core';
+import { fetch } from 'node-fetch';
 
 async function run() {
     try {
@@ -29,7 +30,10 @@ async function run() {
 
 function updateVariable(parameters) {
     const octokit = new Octokit({
-        auth: parameters.token
+        auth: parameters.token,
+        request: {
+            fetch: fetch
+        }
     });
 
     return octokit.request(`PATCH /${parameters.base}/${parameters.repository}/actions/variables/${parameters.name}`, {
