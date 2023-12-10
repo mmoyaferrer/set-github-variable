@@ -16,12 +16,12 @@
 Update [Github Variable](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) for a repository or organization.
 
 ```YAML
-uses: mmoyaferrer/set-github-variable@v1.0.0
-with:
-  name: 'SAMPLE_VAR'
-  value: 'Hello World'
-  repository: mmoyaferrer/set-github-variable
-  token: ${{ secrets.REPO_ACCESS_TOKEN }}
+- uses: mmoyaferrer/set-github-variable@v1.0.0
+  with:
+      name: 'SAMPLE_VAR'
+      value: 'Hello World'
+      repository: mmoyaferrer/set-github-variable
+      token: ${{ secrets.REPO_ACCESS_TOKEN }}
 ```
 
 ### Pre-requisites
