@@ -1,0 +1,44 @@
+name: 'Set Github Variable'
+author: Manuel Moya
+description: 'Update variables for github repository/org'
+
+inputs:
+    name:
+        description: Variable name
+        required: true
+
+    value:
+        description: Variable value
+        required: true
+
+    repository:
+        description: Repository name, with format "<organization>/<repository>" i.e "mmoyaferrer/set-github-variable"
+        default: ${{ github.repository }}
+        required: true
+
+    token:
+        description: Repository access token (Personal Access Token or Organization Token)
+        required: true
+
+    org:
+        description: Only in case of Org-scope variable, specifies the Organization name,
+        required: false
+
+    visibility:
+        description: Only in case of Org-scope variable, specifies the access level 'all', 'private', or 'selected'
+        required: false
+
+    selectedRepositoryIds:
+        description: Only in case of Org-scope variable and visibility equals selected, it's an array of repository ids where to update the variable
+        required: false
+
+outputs:
+    code:
+        description: Status code
+
+    data:
+        description: Response data
+
+runs:
+    using: 'node12'
+    main: 'index.js'

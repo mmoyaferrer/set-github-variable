@@ -1,0 +1,5 @@
+# node_modules
+node_modules
+
+# Local folder created for debugging purposes
+.localtest
