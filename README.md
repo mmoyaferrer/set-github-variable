@@ -29,6 +29,8 @@ Updates [Github Variable](https://docs.github.com/en/actions/learn-github-action
 1. Create a [Github Variable](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) for your repo/organization.
 2. Create an access token with access to manage actions repository variables.
 
+It does not require to do `checkout` and it's independent on the Github runner/docker container used.
+
 ### Customizing
 
 #### inputs
